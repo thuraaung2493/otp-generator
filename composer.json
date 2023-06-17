@@ -1,6 +1,6 @@
 {
-  "name": "thuraaung/package-name",
-  "description": "Package description.",
+  "name": "thuraaung2493/otp-generator",
+  "description": "A simple OTP generator.",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -13,16 +13,27 @@
   ],
   "autoload": {
     "psr-4": {
-      "Thuraaung\\Namespace\\": "src/"
+      "Thuraaung\\OtpGenerator\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Thuraaung\\Namespace\\Tests\\": "tests/"
+      "Thuraaung\\OtpGenerator\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Thuraaung\\OtpGenerator\\PackageServiceProvider"
+      ],
+      "aliases": [
+        "OtpGenerator"
+      ]
     }
   },
   "require": {
-    "php": "^8.2"
+    "php": "^8.2",
+    "nunomaduro/mock-final-classes": "^1.2"
   },
   "require-dev": {
     "laravel/pint": "^1.10",

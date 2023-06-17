@@ -1,10 +1,32 @@
 <?php
 
-namespace Tests;
+declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase as BaseTestCase;
+namespace Thuraaung\OtpGenerator\Tests;
 
-abstract class TestCase extends BaseTestCase
+use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Facade;
+use Orchestra\Testbench\TestCase as BaseTestCase;
+use Thuraaung\OtpGenerator\Facades\OtpGenerator;
+use Thuraaung\OtpGenerator\PackageServiceProvider;
+
+final class TestCase extends BaseTestCase
 {
-    //
+    protected function getPackageProviders($app): array
+    {
+        return [
+            PackageServiceProvider::class,
+        ];
+    }
+
+    /**
+     * @param Application $app
+     * @return array<string,class-string<Facade>>
+     */
+    protected function getPackageAliases($app): array
+    {
+        return [
+            'OtpGenerator' => OtpGenerator::class,
+        ];
+    }
 }
