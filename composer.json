@@ -27,7 +27,7 @@
         "Thuraaung\\OtpGenerator\\PackageServiceProvider"
       ],
       "aliases": [
-        "OtpGenerator"
+        "Thuraaung\\OtpGenerator\\Facades\\OtpGenerator"
       ]
     }
   },
