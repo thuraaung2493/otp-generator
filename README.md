@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-composer require thuraaung2493/otp-generator@dev
+composer require thuraaung2493/otp-generator:dev-main
 ```
 
 ## Usage

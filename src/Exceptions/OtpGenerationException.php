@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Services\Generators\Otp\Exceptions;
+namespace Thuraaung\OtpGenerator\Exceptions;
 
 use Exception;
 

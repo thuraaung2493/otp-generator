@@ -36,8 +36,8 @@
     "nunomaduro/mock-final-classes": "^1.2"
   },
   "require-dev": {
+    "larastan/larastan": "^2.0",
     "laravel/pint": "^1.10",
-    "nunomaduro/larastan": "^2.0",
     "orchestra/testbench": "^8.5",
     "pestphp/pest": "^2.6"
   },
@@ -71,6 +71,6 @@
       "@test"
     ]
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "prefer-stable": true
 }

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Thuraaung\OtpGenerator;
 
-use App\Services\Generators\Otp\Exceptions\OtpGenerationException;
 use Throwable;
 use Thuraaung\OtpGenerator\Contracts\OtpGeneratorContract;
+use Thuraaung\OtpGenerator\Exceptions\OtpGenerationException;
 
 final class OtpGenerator implements OtpGeneratorContract
 {
@@ -21,7 +21,7 @@ final class OtpGenerator implements OtpGeneratorContract
             throw new OtpGenerationException('Failed to generate an OTP codes!');
         }
 
-        return str_pad(
+        return mb_str_pad(
             string: strval($number),
             length: 6,
             pad_string: '0',
